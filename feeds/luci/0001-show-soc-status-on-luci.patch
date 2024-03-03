@@ -1,4 +1,4 @@
-From fd4b5de46002a345bde00723e8f917d4869ef3b6 Mon Sep 17 00:00:00 2001
+From 6607061537b4007182f51d31ba4af3427082d45c Mon Sep 17 00:00:00 2001
 From: pexcn <pexcn97@gmail.com>
 Date: Sun, 3 Mar 2024 15:31:06 +0800
 Subject: [PATCH] show soc status on luci
@@ -144,7 +144,7 @@ index 3c4fea4691..abccca886e 100644
  };
  
 diff --git a/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js b/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
-index 45f7b4acae..3f32e47b8b 100644
+index 45f7b4acae..032f74bdd4 100644
 --- a/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
 +++ b/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
 @@ -8,6 +8,21 @@ var callLuciVersion = rpc.declare({
@@ -200,7 +200,7 @@ index 45f7b4acae..3f32e47b8b 100644
 +			) : null,
 +			_('核心频率'),          coreinfo.cpufreq / 1000 + ' MHz ' + '(' + coreinfo.governor + ')',
 +			_('核心温度'),          'CPU ' + coretemp.cpu + ' °C' + ' / ' + 'WiFi ' + coretemp.wifi + ' °C',
-+			_('使用率'),            'CPU ' + coreusage.cpu + '%' + ' / ' + 'NSS' + coreusage.nss + '%'
++			_('使用率'),            'CPU ' + coreusage.cpu + '%' + ' / ' + 'NSS ' + coreusage.nss + '%'
  		];
  
  		var table = E('table', { 'class': 'table' });
